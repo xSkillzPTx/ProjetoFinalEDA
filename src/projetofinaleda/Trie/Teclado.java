@@ -37,7 +37,7 @@ public class Teclado {
     static {
         VIZINHOS = new HashMap<>();
 
-        // Linha superior
+        
         adicionarVizinhos('q', "w");
         adicionarVizinhos('w', "qea");
         adicionarVizinhos('e', "wrsd");
@@ -49,7 +49,7 @@ public class Teclado {
         adicionarVizinhos('o', "ipkl");
         adicionarVizinhos('p', "olç");
 
-        // Linha do meio
+        
         adicionarVizinhos('a', "qws");
         adicionarVizinhos('s', "awedxz");
         adicionarVizinhos('d', "serfcx");
@@ -61,7 +61,7 @@ public class Teclado {
         adicionarVizinhos('l', "kopç");
         adicionarVizinhos('ç', "pl");
 
-        // Linha de baixo (sem espaço, mas com enter normalmente)
+        
         adicionarVizinhos('z', "asx");
         adicionarVizinhos('x', "zcsd");
         adicionarVizinhos('c', "xdfv");
@@ -87,11 +87,11 @@ public class Teclado {
                                                                 
     }
 
-    // Método que vais usar em todo o lado
-    //“Dá-me os vizinhos da letra c. Se não souberes quem são, pelo menos devolve a própria letra c.”
+    
+    //“Dá-me os vizinhos da letra c. Se não souberes quem são, devolve a própria letra c.”
     public static Set<Character> getVizinhos(char c) {
         c = Character.toLowerCase(c);
-        return VIZINHOS.getOrDefault(c, Set.of(c)); // se não existir, devolve só ela própria
+        return VIZINHOS.getOrDefault(c, Set.of(c)); // se não existir, devolve ela própria
     }
 
    

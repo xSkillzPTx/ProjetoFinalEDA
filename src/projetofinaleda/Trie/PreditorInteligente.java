@@ -12,7 +12,7 @@ public class PreditorInteligente {
 
         Set<String> todas = new HashSet<>();
         for (String p : prefixos) {
-            todas.addAll(trie.sugerir(p, 50));
+            todas.addAll(trie.sugerir(p, 5));
         }
 
         List<String> resultado = new ArrayList<>(todas);
@@ -21,7 +21,7 @@ public class PreditorInteligente {
             return lenDiff != 0 ? lenDiff : a.compareTo(b);
         });
         List<String> sugestoes =resultado.size() <= maximo ? resultado : resultado.subList(0, maximo);
-        System.out.println("PreditorInteligente output: "+ sugestoes);
+       // System.out.println("PreditorInteligente output: "+ sugestoes);
         return sugestoes;
     }
 

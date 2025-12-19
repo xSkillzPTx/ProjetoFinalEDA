@@ -10,7 +10,7 @@ import java.io.*;
  */
 public class PredictiveEngine {
 
-    private List<String> dictionary;
+    public List<String> dictionary;
     private Map<Character, char[]> vizinhos;
 
     public PredictiveEngine() {
@@ -110,7 +110,7 @@ public class PredictiveEngine {
         if (resultadoOrganizado.size() > 5) {
             return resultadoOrganizado.subList(0, 5);
         }
-        System.out.println("PredictiveEngine output: "+ resultadoOrganizado);
+        System.out.println("PredictiveEngine da palavra "+ input +"output: "+ resultadoOrganizado);
         return resultadoOrganizado;
 
     }
